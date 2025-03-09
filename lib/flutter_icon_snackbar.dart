@@ -193,7 +193,7 @@ class _SnackBarWidgetState extends State<SnackBarWidget> {
                     ),
                   ),
                   const SizedBox(width: 8),
-                  Column(
+                 Expanded(child:  Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -205,14 +205,14 @@ class _SnackBarWidgetState extends State<SnackBarWidget> {
                           opacity: _fadeAnimationStart ? 1.0 : 0.0,
                           child: Text(widget.label,
                               overflow: TextOverflow.visible,
-                              maxLines: 1,
+                              maxLines:2,
                               style: widget.labelTextStyle ??
                                   const TextStyle(
                                       fontSize: 16, color: Colors.white)),
                         ),
                       ),
                     ],
-                  ),
+                  ),)
                 ],
               ),
             ),
